@@ -8,6 +8,7 @@
     android:background="@color/white">
 
     <TextView
+
         android:id="@+id/chooseText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -17,6 +18,7 @@
         android:layout_marginBottom="40dp" />
 
     <Button
+
         android:id="@+id/btnUser"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,6 +26,7 @@
         android:layout_marginBottom="16dp" />
 
     <Button
+
         android:id="@+id/btnOrganizer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

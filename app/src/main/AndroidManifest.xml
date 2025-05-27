@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Eventify"
+
         tools:targetApi="31">
 
         <!-- Esta es la pantalla de inicio -->
@@ -34,6 +35,13 @@
         <activity android:name=".RegisterUserActivity" android:exported="true" />
         <!-- Pantalla de inicio de usuario -->
         <activity android:name=".UserHomeActivity" android:exported="true" />
+
+        <!-- Pantalla tras elegir resitro organizador -->
+        <activity android:name=".RegisterOrganizerActivity" android:exported="true" />
+
+        <!-- Pantalla de inicio del organizador -->
+        <activity android:name=".OrganizerHomeActivity" android:exported="true" />
+
 
 
 

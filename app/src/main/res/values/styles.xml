@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Botón personalizado -->
+    <style name="EventifyButton" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/colorPrimario</item>
+        <item name="android:textColor">@color/colorSecundario</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="android:padding">12dp</item>
+    </style>
+
+    <!-- Campo de texto -->
+    <style name="EventifyEditText" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="android:textColor">@color/colorTexto</item>
+        <item name="android:backgroundTint">@color/colorPrimario</item>
+        <item name="boxBackgroundColor">@color/colorBlanco</item>
+        <item name="boxCornerRadiusTopStart">12dp</item>
+        <item name="boxCornerRadiusTopEnd">12dp</item>
+        <item name="boxCornerRadiusBottomStart">12dp</item>
+        <item name="boxCornerRadiusBottomEnd">12dp</item>
+    </style>
+
+    <!-- Título -->
+    <style name="EventifyTitle">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorSecundario</item>
+        <item name="android:layout_marginBottom">24dp</item>
+    </style>
+
+</resources>

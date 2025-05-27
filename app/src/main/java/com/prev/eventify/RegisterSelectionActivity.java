@@ -32,6 +32,11 @@ public class RegisterSelectionActivity extends AppCompatActivity {
             startActivity(new Intent(RegisterSelectionActivity.this, RegisterUserActivity.class));
         });
 
+        btnOrganizer.setOnClickListener(v -> {
+            startActivity(new Intent(RegisterSelectionActivity.this, RegisterOrganizerActivity.class));
+        });
+
+
 
     }
 }

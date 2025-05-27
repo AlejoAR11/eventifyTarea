@@ -75,5 +75,3 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 }
-
-//xdsd
