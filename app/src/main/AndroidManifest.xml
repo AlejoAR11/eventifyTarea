@@ -45,6 +45,10 @@
         <!-- Pantalla para crear eventos -->
         <activity android:name=".CreateEventActivity" android:exported="true" />
 
+        <!-- Pantalla para editar eventos -->
+        <activity android:name=".EditEventActivity" android:exported="true" />
+
+
 
 
 

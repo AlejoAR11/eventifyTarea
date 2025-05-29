@@ -32,7 +32,7 @@ public class UserHomeActivity extends AppCompatActivity {
         recyclerEventos.setLayoutManager(new LinearLayoutManager(this));
 
         listaEventos = new ArrayList<>();
-        adapter = new EventoAdapter(listaEventos);
+        adapter = new EventoAdapter(listaEventos); // ← solo lectura, sin botones
         recyclerEventos.setAdapter(adapter);
 
         String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
@@ -56,7 +56,10 @@ public class UserHomeActivity extends AppCompatActivity {
                         listaEventos.clear();
                         for (DataSnapshot eventoSnap : snapshot.getChildren()) {
                             Evento evento = eventoSnap.getValue(Evento.class);
-                            listaEventos.add(evento);
+                            if (evento != null) {
+                                evento.id = eventoSnap.getKey(); // importante si lo necesitas
+                                listaEventos.add(evento);
+                            }
                         }
                         adapter.notifyDataSetChanged();
                     }

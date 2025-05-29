@@ -26,7 +26,9 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerEventos = findViewById(R.id.recyclerEventos);
         recyclerEventos.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new EventoAdapter(listaEventos);
+        adapter = new EventoAdapter(listaEventos); // ← usa constructor sin botones
+
+
         recyclerEventos.setAdapter(adapter);
 
         cargarEventos();

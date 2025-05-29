@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
     android:padding="24dp"
     android:background="@color/colorFondo">
 
@@ -15,16 +14,20 @@
         android:textSize="22sp"
         android:textStyle="bold"
         android:textColor="@color/colorSecundario"
-        android:layout_marginBottom="32dp" />
+        android:layout_marginBottom="16dp" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnGoToCreateEvent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Crear evento"
-
         android:textColor="@color/white"
         android:backgroundTint="@color/colorPrimario"
+        android:layout_marginBottom="16dp" />
 
-        android:padding="12dp" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerEventosOrganizador"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false" />
 </LinearLayout>
