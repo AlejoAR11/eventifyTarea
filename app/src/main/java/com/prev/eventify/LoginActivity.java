@@ -56,7 +56,7 @@ public class LoginActivity extends AppCompatActivity {
                                             database.getReference("organizadores").child(uid).get()
                                                     .addOnSuccessListener(snapshot2 -> {
                                                         if (snapshot2.exists()) {
-                                                           // startActivity(new Intent(this, OrganizerHomeActivity.class));
+                                                            startActivity(new Intent(this, OrganizerHomeActivity.class));
                                                             finish();
                                                         } else {
                                                             Toast.makeText(this, "Rol no identificado", Toast.LENGTH_LONG).show();

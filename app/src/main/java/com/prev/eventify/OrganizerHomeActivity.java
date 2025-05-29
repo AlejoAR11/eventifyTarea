@@ -1,9 +1,9 @@
 package com.prev.eventify;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,6 +13,8 @@ import com.google.firebase.database.*;
 public class OrganizerHomeActivity extends AppCompatActivity {
 
     private TextView organizerWelcomeText;
+    private Button btnGoToCreateEvent;
+
     private FirebaseAuth auth;
     private DatabaseReference organizerRef;
 
@@ -22,6 +24,7 @@ public class OrganizerHomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_organizer_home);
 
         organizerWelcomeText = findViewById(R.id.organizerWelcomeText);
+        btnGoToCreateEvent = findViewById(R.id.btnGoToCreateEvent);
         auth = FirebaseAuth.getInstance();
 
         String uid = auth.getCurrentUser().getUid();
@@ -36,8 +39,12 @@ public class OrganizerHomeActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(OrganizerHomeActivity.this, "Error al cargar datos", Toast.LENGTH_SHORT).show();
+                organizerWelcomeText.setText("Bienvenido");
             }
+        });
+
+        btnGoToCreateEvent.setOnClickListener(v -> {
+            startActivity(new Intent(this, CreateEventActivity.class));
         });
     }
 }

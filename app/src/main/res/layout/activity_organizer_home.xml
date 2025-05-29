@@ -1,17 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@color/white"
-    android:padding="24dp">
+    android:padding="24dp"
+    android:background="@color/colorFondo">
 
     <TextView
         android:id="@+id/organizerWelcomeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="¡Bienvenido, organizador!"
-        android:textSize="24sp"
+        android:textSize="22sp"
         android:textStyle="bold"
-        android:textColor="@color/black" />
+        android:textColor="@color/colorSecundario"
+        android:layout_marginBottom="32dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnGoToCreateEvent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Crear evento"
+
+        android:textColor="@color/white"
+        android:backgroundTint="@color/colorPrimario"
+
+        android:padding="12dp" />
 </LinearLayout>

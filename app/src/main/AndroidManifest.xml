@@ -42,11 +42,15 @@
         <!-- Pantalla de inicio del organizador -->
         <activity android:name=".OrganizerHomeActivity" android:exported="true" />
 
+        <!-- Pantalla para crear eventos -->
+        <activity android:name=".CreateEventActivity" android:exported="true" />
+
 
 
 
 
     </application>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
 </manifest>
 
